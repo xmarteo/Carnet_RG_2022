@@ -1,0 +1,911 @@
+\documentclass[twoside]{article}
+
+\usepackage[paperwidth=150mm, paperheight=230mm]{geometry}
+\usepackage{fontspec}
+%\usepackage[latin1]{inputenc}
+\usepackage[latin.medieval, french]{babel}
+\usepackage[strict]{changepage}
+\usepackage{fancyhdr}
+\usepackage{paracol}
+\usepackage{tableof}
+\usepackage{setspace}
+\usepackage{alltt}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{xstring}
+\usepackage{parskip}
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mise en page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% on numérote les nbp par page et non globalement
+\usepackage[perpage]{footmisc}
+
+% définition des en-têtes et pieds de page
+\pagestyle{empty}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{0pt}
+
+% la commande titres permet de changer les titres de gauche et de droite.
+\newcommand{\titres}[2]{
+	\renewcommand{\rightmark}{\textcolor{red}{\sc #2}}
+	\renewcommand{\leftmark}{\textcolor{red}{\sc #1}}
+}
+\titres{}{}
+
+% pas d'indentation
+\setlength{\parindent}{0mm}
+
+\geometry{
+inner=20mm,
+outer=20mm,
+top=10mm,
+bottom=25mm,
+headsep=0mm,
+}
+
+\twosided[p]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Options gregorio %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[autocompile]{gregoriotex}
+%\usepackage{gregoriotex}
+
+\definecolor{gregoriocolor}{RGB}{215,65,29}
+
+%% style général de gregorio :
+% lignes rouges, commenter pour du noir
+%\gresetlinecolor{gregoriocolor}
+
+% texte <alt> (au-dessus de la portée) en rouge et en petit, avec réglage de sa position verticale
+\grechangestyle{abovelinestext}{\color{gregoriocolor}\footnotesize}
+\newcommand{\altraise}{-2.4mm}
+\grechangedim{abovelinestextraise}{\altraise}{scalable}
+
+% taille des initiales
+\newcommand{\initialsize}[1]{
+    \grechangestyle{initial}{\fontspec{ZallmanCaps}\fontsize{#1}{#1}\selectfont}
+}
+\newcommand{\defaultinitialsize}{32}
+\initialsize{\defaultinitialsize}
+% espace avant et après les initiales
+\newcommand{\initialspace}[1]{
+  \grechangedim{afterinitialshift}{#1}{scalable}
+  \grechangedim{beforeinitialshift}{#1}{scalable}
+}
+\newcommand{\defaultinitialspace}{0cm}
+\initialspace{\defaultinitialspace}
+
+
+% on définit le système qui capture des headers pour générer des annotations
+% cette commande sera appelée pour définir des abréviations ou autres substitutions
+\newcommand{\resultat}{}
+\newcommand{\abbrev}[3]{
+  \IfSubStr{#1}{#2}{ \renewcommand{\resultat}{#3} }{}
+}
+\newcommand{\officepartannotation}[1]{
+  \renewcommand{\resultat}{#1}
+  \abbrev{#1}{ntro}{ {Intr.} }
+  \abbrev{#1}{espo}{Resp.}
+  \abbrev{#1}{adu}{Gr.}
+  \abbrev{#1}{ll}{All.}
+  \abbrev{#1}{act}{Tract.}
+  \abbrev{#1}{equen}{Seq.}
+  \abbrev{#1}{ffert}{Off.}
+  \abbrev{#1}{ommun}{Co.}
+  \abbrev{#1}{ntip}{Ant.}
+  \abbrev{#1}{ntic}{Cant.}
+  \abbrev{#1}{ymn}{Hy.}
+  \abbrev{#1}{salm}{}
+  \abbrev{#1}{Toni Communes}{}
+  \abbrev{#1}{yrial}{}
+  \greannotation{\resultat}
+}
+\newcommand{\modeannotation}[1]{
+  \renewcommand{\resultat}{#1}
+  \abbrev{#1}{1}{ {\sc i} }
+  \abbrev{#1}{2}{ {\sc ii} }
+  \abbrev{#1}{3}{ {\sc iii} }
+  \abbrev{#1}{4}{ {\sc iv} }
+  \abbrev{#1}{5}{ {\sc v} }
+  \abbrev{#1}{6}{ {\sc vi} }
+  \abbrev{#1}{7}{ {\sc vii} }
+  \abbrev{#1}{8}{ {\sc viii} }
+  \greannotation{\resultat}
+}
+\gresetheadercapture{office-part}{officepartannotation}{}
+\gresetheadercapture{mode}{modeannotation}{string}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Graphisme %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% on définit l'échelle générale
+
+\newcommand{\echelle}{1}
+
+% on centre les titres et on ne les numérote pas
+\titleformat{\section}[block]{\Large\filcenter\sc}{}{}{}
+\titleformat{\subsection}[block]{\large\filcenter\sc}{}{}{}
+\titleformat{\paragraph}[block]{\filcenter\sc}{}{}{}
+\setcounter{secnumdepth}{0}
+% on diminue l'espace avant les titres
+\titlespacing*{\paragraph}{0pt}{1.8ex plus .4ex minus .4ex}{1.2ex plus .2ex minus .2ex}
+
+% commandes versets, repons et croix
+\newcommand{\vv}{\textcolor{gregoriocolor}{\fontspec[Scale=\echelle]{Charis SIL}℣.\hspace{3mm}}}
+\newcommand{\rr}{\textcolor{gregoriocolor}{\fontspec[Scale=\echelle]{Charis SIL}℟.\hspace{3mm}}}
+\newcommand{\cc}{\textcolor{gregoriocolor}{\fontspec[Scale=\echelle]{FreeSerif}\symbol{"2720}~}}
+\renewcommand{\aa}{\textcolor{gregoriocolor}{\fontspec[Scale=\echelle]{Charis SIL}\Abar.\hspace{3mm}}}
+
+% commandes diverses
+\newcommand{\antiphona}{\textcolor{gregoriocolor}{\noindent Antiphona.\hspace{4mm}}}
+\newcommand{\antienne}{\textcolor{gregoriocolor}{\noindent Antienne.\hspace{4mm}}}
+\newcommand{\rubrique}[1]{\textcolor{gregoriocolor}{\emph{#1}}}
+\newcommand{\saut}{\hspace{1cm}}
+\newcommand{\capsaut}{\hspace{3mm}}
+% pour affichier 1 en rouge et un peu d'espace
+\newcommand{\un}{{\color{gregoriocolor} 1~~~}}
+
+% abréviations
+\newcommand{\tpalleluia}{\rubrique{(T.P.} \mbox{Allelúia.\rubrique{)}}}
+\newcommand{\tpalleluiafr}{\rubrique{(T.P.} \mbox{Alléluia.\rubrique{)}}}
+
+\newcommand{\tqomittitur}{{\small \rubrique{(In Tempore Quadragesimæ ommittitur} Allelúia.\rubrique{)}}}
+\newcommand{\careme}{{\small \rubrique{(Pendant le Carême on omet l'}Alléluia.\rubrique{)}}}
+
+% environnement hymne : alltt + normalfont + marges custom
+\newenvironment{hymne}
+  {
+  \begin{adjustwidth}{1.6cm}{1mm}
+  \begin{alltt}\normalfont
+  }
+  {
+  \end{alltt}
+  \end{adjustwidth}
+  }
+  
+% la commande \u permet de souligner les inflexions
+\let\u\textbf
+
+% on définit la police par défaut
+\setmainfont[Ligatures=TeX, Scale=\echelle]{Charis SIL}
+%renderer=ICU a l'air de ne plus marcher...
+%\setmainfont[Renderer=ICU, Ligatures=TeX, Scale=\echelle]{Charis SIL}
+\setstretch{0.9}
+
+\begin{document}
+
+%\null \newpage
+
+\sloppy
+
+\selectlanguage{french}
+\begin{center}\begin{doublespace}
+{\fontspec[Scale=\echelle]{Futura Book}
+\MakeUppercase{\Large Messe\\Mémoire de saint Jean-Paul II, pape}\\
+selon l'usage réformé du rite romain
+}
+\end{doublespace}\end{center}
+
+\gregorioscore{gabc/in.gabc}
+
+\rubrique{Si. 45 : 30 \& Ps. 131}~~~~~~
+\emph{\rr Le Seigneur a établi pour lui une alliance de paix, et il en fit un chef afin que lui revînt la dignité du sacerdoce à jamais.\\
+\vv \rubrique{\emph{1. }} Souviens-toi, Seigneur, de David et de sa grande soumission.\\
+\vv \rubrique{\emph{7. }} Entrons dans la demeure de Dieu, prosternons-nous aux pieds de son trône.\\
+\vv \rubrique{\emph{9. }} Que tes prêtres soient vêtus de justice, que tes fidèles crient de joie !}
+
+\gresetinitiallines{0}
+\gregorioscore{gabc/or01--in_nomine_patris--solesmes.gabc}
+
+\emph{\vv Au nom du Père, du Fils et du Saint-Esprit.~~~~\rr Amen.}
+
+\gregorioscore{gabc/or02--gratia_domini--solesmes.gabc}
+
+\emph{\vv La grâce de Jésus notre Seigneur, l'amour de Dieu le Père et la communion de l'Esprit Saint soient toujours avec vous. \\
+\rr Et avec votre esprit.}
+
+\begin{paracol}{2}
+\vv Fratres, agnoscámus peccáta nostra, 
+ut apti simus ad sacra mystéria celebránda.
+
+\switchcolumn
+
+\vv Préparons nous à célébrer le mystère de l’Eucharistie, 
+en reconnaissant que nous avons péché.
+
+\switchcolumn*
+
+\rr Confíteor Deo omnipoténti et vobis, fratres,
+quia peccávi nimis
+cogitatióne, verbo, ópere et omissióne: 
+mea culpa, mea culpa, mea máxima culpa. 
+Ideo precor beátam Maríam semper Vírginem,
+omnes Angelos et Sanctos,
+et vos, fratres, oráre pro me
+ad Dóminum Deum nostrum. 
+
+\switchcolumn
+
+\rr Je confesse à Dieu tout-puissant, 
+je reconnais devant vous, frères et soeurs, que j’ai péché
+en pensée, en parole, par action et par omission ; 
+oui j’ai vraiment péché.
+c’est pourquoi je supplie
+la bienheureuse Vierge Marie,
+les anges et tous les saints,
+et vous aussi, frères et soeurs, 
+de prier pour moi le Seigneur notre Dieu. 
+
+\switchcolumn*
+
+\vv Misereátur nostri omnípotens Deus
+et, dimissís peccátis nostris,
+perdúcat nos ad vitam ætérnam. \\
+\rr Amen. 
+
+\switchcolumn
+
+\vv Que Dieu Tout-Puissant nous fasse miséricorde ; qu'il nous pardonne nos péchés et nous conduise à la vie éternelle.~~~~\rr Amen.
+
+
+\end{paracol}
+\gresetinitiallines{1}
+\gregorioscore{gabc/01ky--kyrie_iii--solesmes.gabc}
+
+\paragraph{Collecte}
+
+\begin{paracol}{2}
+\vv Orémus.
+\switchcolumn
+\vv Prions le Seigneur.
+\switchcolumn*
+Deus, dives in misericórdia, qui beátum Ioánnem Paulum, papam, univérsæ Ecclésiæ tuæ præésse voluísti, præsta, quǽsumus, ut, eius institútis edócti, corda nostra salutíferæ grátiæ Christi, uníus redemptóris hóminis, fidénter aperiámus. Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.\\
+\rr Amen.
+\switchcolumn
+Dieu, riche en miséricorde, tu as appelé le Saint pape Jean-Paul à guider ton Église répandue dans le monde entier ; forts de son enseignement, accorde-nous d’ouvrir nos coeurs avec confiance à la grâce salvifique du Christ, unique Rédempteur de l’homme. Lui qui vit et règne avec toi dans l’unité du Saint-Esprit, Dieu, pour les siècles des siècles.\\
+\rr Amen.
+\end{paracol}
+
+\paragraph{Première lecture}
+
+\begin{paracol}{2}
+Lectio Epístolæ beati Páuli \\ Apóstoli ad Ephésios.
+\switchcolumn
+Lecture de la lettre de Saint Paul, Apôtre, aux Éphésiens.
+\end{paracol}
+\begin{alltt}\normalfont
+    Frères,
+        à chacun d’entre nous, la grâce a été donnée
+        selon la mesure du don fait par le Christ.
+    C’est pourquoi l’Écriture dit :
+        Il est monté sur la hauteur, il a capturé des captifs,
+        il a fait des dons aux hommes.
+    Que veut dire : Il est monté ?
+    – Cela veut dire qu’il était d’abord descendu
+        dans les régions inférieures de la terre.
+        Et celui qui était descendu
+        est le même qui est monté au-dessus de tous les cieux
+        pour remplir l’univers.
+    Et les dons qu’il a faits,
+        ce sont les Apôtres,
+        et aussi les prophètes, les évangélisateurs,
+        les pasteurs et ceux qui enseignent.
+    De cette manière, les fidèles sont organisés
+        pour que les tâches du ministère soient accomplies
+        et que se construise le corps du Christ,
+        jusqu’à ce que nous parvenions tous ensemble
+            à l’unité dans la foi et la pleine connaissance du Fils de Dieu,
+            à l’état de l’Homme parfait,
+            à la stature du Christ dans sa plénitude.
+    Alors, nous ne serons plus comme des petits enfants,
+        nous laissant secouer et mener à la dérive
+        par tous les courants d’idées,
+        au gré des hommes qui emploient la ruse
+        pour nous entraîner dans l’erreur.
+    Au contraire, en vivant dans la vérité de l’amour,
+        nous grandirons pour nous élever en tout
+        jusqu’à celui qui est la Tête, le Christ.
+    Et par lui, dans l’harmonie et la cohésion,
+        tout le corps poursuit sa croissance,
+        grâce aux articulations qui le maintiennent,
+        selon l’énergie qui est à la mesure de chaque membre.
+    Ainsi le corps se construit dans l’amour..
+\end{alltt}
+
+\gresetinitiallines{0}
+\gregorioscore{gabc/or04--verbum_domini_solesmes.gabc}
+
+\emph{\vv Parole du Seigneur. ~~~~ \rr Nous rendons grâce à Dieu.}
+
+\pagebreak
+\gresetinitiallines{1}
+\gregorioscore{gabc/gr.gabc}
+
+\rubrique{Si. 44 : 16 \& 20}\\
+\emph{\rr Voilà le grand prêtre qui en ses jours a plu à Dieu.\\
+\vv Il ne s’est pas trouvé son semblable pour conserver la loi du Très-Haut.}\\
+~\\
+\gregorioscore{gabc/al.gabc}
+
+\rubrique{Ps. 109 : 4b}\\
+\emph{Alléluia, alléluia. Tu es prêtre à jamais, selon l'ordre de Melchisédech. Alléluia.}
+
+\paragraph{Évangile}
+
+\gresetinitiallines{0}
+\gregorioscore{gabc/or05--dominus_vobiscum_..._lectio_sancti_evangelii_(c)--solesmes.gabc}
+\emph{\vv Le Seigneur soit avec vous. ~~~~\rr Et avec votre esprit.\\
+\vv Évangile de Jésus-Christ selon saint Luc. \\
+\rr Gloire à toi, Seigneur.}
+
+\begin{alltt}\normalfont
+    Un jour,
+        des gens rapportèrent à Jésus l’affaire des Galiléens
+        que Pilate avait fait massacrer,
+        mêlant leur sang à celui des sacrifices qu’ils offraient.
+    Jésus leur répondit :
+    « Pensez-vous que ces Galiléens
+        étaient de plus grands pécheurs
+        que tous les autres Galiléens,
+        pour avoir subi un tel sort ?
+    Eh bien, je vous dis : pas du tout !
+    Mais si vous ne vous convertissez pas,
+        vous périrez tous de même.
+    Et ces dix-huit personnes
+        tuées par la chute de la tour de Siloé,
+        pensez-vous qu’elles étaient plus coupables
+        que tous les autres habitants de Jérusalem ?
+    Eh bien, je vous dis : pas du tout !
+    Mais si vous ne vous convertissez pas,
+        vous périrez tous de même. »
+
+    Jésus disait encore cette parabole :
+    « Quelqu’un avait un figuier planté dans sa vigne.
+    Il vint chercher du fruit sur ce figuier,
+        et n’en trouva pas.
+    Il dit alors à son vigneron :
+    “Voilà trois ans que je viens chercher du fruit sur ce figuier,
+        et je n’en trouve pas.
+     Coupe-le.
+    À quoi bon le laisser épuiser le sol ?”
+    Mais le vigneron lui répondit :
+    “Maître, laisse-le encore cette année,
+        le temps que je bêche autour
+        pour y mettre du fumier.
+    Peut-être donnera-t-il du fruit à l’avenir.
+    Sinon, tu le couperas.” »
+\end{alltt}
+
+\gregorioscore{gabc/or06--verbum_domini_(c)--solesmes.gabc}
+\emph{\vv Parole du Seigneur. ~~~~ \rr Louange à toi, ô Christ.}
+
+\paragraph{Offertoire}
+
+\gresetinitiallines{1}
+\gregorioscore{gabc/of.gabc}
+
+\rubrique{Ps. 88 : 21-22}
+\emph{J’ai trouvé David mon serviteur: de mon huile sainte, je lui ai donné l’onction. Ma main en effet lui viendra en aide, et mon bras le fortifiera.}
+
+\begin{paracol}{2}
+Benedíctus es, Dómine, Deus univérsi,
+quia de tua largitáte accépimus panem,
+quem tibi offérimus,
+fructum terræ et óperis mánuum hóminum:
+ex quo nobis fiet panis vitæ. 
+
+\switchcolumn
+
+Tu es béni, Dieu de l'Univers, toi qui nous donnes ce pain, fruit de la terre et du travail des hommes. Nous te le présentons, il deviendra le pain de la vie.
+
+\switchcolumn*
+
+Benedíctus Deus in sǽcula. 
+
+\switchcolumn
+
+Béni soit Dieu, maintenant et toujours.
+
+\switchcolumn*
+
+\rubrique{Le prêtre verse une goutte d'eau dans le calice :}\\
+Per huius aquæ et vini mystérium
+eius efficiámur divinitátis consórtes,
+qui humanitátis nostræ fíeri dignátus est párticeps.
+
+\switchcolumn
+
+~\\
+Comme cette eau se mêle au vin pour le sacrement de l'alliance, 
+puissions-nous être unis à la divinité
+de celui qui a pris notre humanité.
+
+\switchcolumn*
+
+Benedíctus es, Dómine, Deus univérsi,
+quia de tua largitáte accépimus vinum,
+quod tibi offérimus,
+fructum vitis et óperis mánuum hóminum,
+ex quo nobis fiet potus spiritális.
+
+\switchcolumn
+
+Tu es béni, Dieu de l'Univers, toi qui nous donnes ce vin, fruit de la terre et du travail des hommes. Nous te le présentons, il deviendra le vin du Royaume éternel.
+
+\switchcolumn*
+
+Benedíctus Deus in sǽcula. 
+
+\switchcolumn
+
+Béni soit Dieu, maintenant et toujours.
+
+\switchcolumn*
+
+\rubrique{Le prêtre dit à voix basse :}\\
+In spíritu humilitátis et in ánimo contríto
+suscipiámur a te, Dómine;
+et sic fiat sacrifícium nostrum in conspéctu tuo hódie,
+ut pláceat tibi, Dómine Deus. 
+Lava me, Dómine, ab iniquitáte mea,
+et a peccáto meo munda me. 
+
+\switchcolumn
+
+~\\
+Humbles et pauvres, nous te supplions, Seigneur, accueille-nous ; que notre sacrifice, en ce jour, trouve grâce devant toi. Lave-moi de mes fautes, Seigneur, purifie-moi de mon péché.
+\end{paracol}
+
+\paragraph{Prière sur les offrandes}
+\begin{paracol}{2}
+
+\vv Oráte, fratres:
+ut meum ac vestrum sacrifícium
+acceptábile fiat apud Deum Patrem omnipoténtem.
+
+\rr Suscípiat Dóminus sacrifícium de mánibus tuis
+ad laudem et glóriam nóminis sui,
+ad utilitátem quoque nostram
+totiúsque Ecclésiæ suæ sanctæ.
+
+\switchcolumn
+
+\vv Priez, frères et sœurs : que mon sacrifice, et le vôtre, soit agréable à Dieu le Père tout-puissant.
+
+\rr Que le Seigneur reçoive de vos mains ce sacrifice à la louange et à la gloire de son nom, pour notre bien et celui de toute l’Église.
+
+\switchcolumn*
+
+Annue nobis, quǽsumus, Dómine,
+ut, in hac festivitáte beáti Ioanni Pauli, hæc nobis prosit oblátio,
+quam immolándo totíus mundi tribuísti relaxári delícta.
+Per Christum Dóminum nostrum.
+
+\switchcolumn
+TODO SUPER OBLATA FR MESSE 2 (STATUIT)\\ 
+\rr Amen.
+
+\end{paracol}
+
+\paragraph{Préface des pasteurs}
+\gresetinitiallines{0}
+\gregorioscore{gabc/or07--dominus_vobiscum_..._sursum_corda_(b._tonus_sollemnis)--solesmes.gabc}
+
+\emph{\vv Le Seigneur soit avec vous.~~~~\rr Et avec votre esprit.\\
+\vv Élevons notre cœur.~~~~\rr Nous le tournons vers le Seigneur.\\
+\vv Rendons grâce au Seigneur notre Dieu.~~~~\rr Cela est juste et bon.}
+
+\begin{paracol}{2}
+\switchcolumn
+\switchcolumn*
+
+Vere dignum et iustum est, æquum et salutáre,
+nos tibi semper et ubíque grátias ágere:
+Dómine, sancte Pater, omnípotens ætérne Deus:
+per Christum Dóminum nostrum.
+Quia sic tríbuis Ecclésiam tuam sancti Ioanni Pauli festivitáte gaudére,
+ut eam exémplo piæ conversatiónis corróbores,
+verbo prædicatiónis erúdias,
+gratáque tibi supplicatióne tueáris.
+Et ídeo, cum Angelórum atque Sanctórum turba,
+hymnum laudis tibi cánimus, sine fine dicéntes: 
+
+\switchcolumn
+
+PREFACE PASTEURS
+
+\end{paracol}
+
+\gresetinitiallines{1}
+\gregorioscore{gabc/03ky--sanctus_iii--solesmes.gabc}
+\emph{Saint, Saint, Saint, le Seigneur, Dieu de l'Univers. Le ciel et la terre sont remplis de ta gloire. Hosanna au plus haut des cieux. Béni soit celui qui vient au nom du Seigneur. Hosanna au plus haut des cieux.}
+
+\paragraph{Canon romain}
+\begin{paracol}{2}
+Te ígitur, clementíssime Pater,
+per Iesum Christum, Fílium tuum,
+Dóminum nostrum,
+súpplices rogámus ac pétimus,
+uti accépta hábeas
+signat semel super panem et calicem simul, dicens: 
+et benedícas \cc hæc dona, hæc múnera,
+hæc sancta sacrifícia illibáta,
+in primis, quæ tibi offérimus
+pro Ecclésia tua sancta cathólica:
+quam pacificáre, custodíre, adunáre
+et régere dignéris toto orbe terrárum:
+una cum fámulo tuo Papa nostro \rubrique{N.}
+et Antístite nostro \rubrique{N.}
+et ómnibus orthodóxis atque cathólicæ
+et apostólicæ fídei cultóribus.
+
+\switchcolumn
+
+Toi, Père très aimant, nous te prions et te supplions par Jésus Christ, ton Fils, notre Seigneur, d’accepter et de bénir \cc ces dons et ces offrandes, sacrifice pur et saint, que nous te présentons avant tout pour ta sainte Eglise catholique : accorde-lui la paix et protège-la, daigne la rassembler dans l'unité et la gouverner par toute la terre ; nous les présentons en union avec  ton serviteur le Pape \rubrique{N.}, notre évêque \rubrique{N.} et tous ceux qui gardent fidèlement la foi catholique reçue des Apôtres.
+
+\switchcolumn*
+
+Meménto, Dómine,
+famulórum famularúmque tuárum \rubrique{N.} et \rubrique{N.}
+et ómnium circumstántium,
+quorum tibi fides cógnita est et nota devótio,
+pro quibus tibi offérimus:
+vel qui tibi ófferunt hoc sacrifícium laudis,
+pro se suísque ómnibus:
+pro redemptióne animárum suárum,
+pro spe salútis et incolumitátis suæ:
+tibíque reddunt vota sua
+ætérno Deo, vivo et vero.
+
+\switchcolumn
+
+Souviens-toi, Seigneur, de tes serviteurs et de tes servantes (de \rubrique{N.} et \rubrique{N.}) et de tous ceux qui sont ici réunis, dont tu connais la foi et l'attachement. Nous t'offrons pour eux, ou ils t'offrent pour eux-mêmes et tous les leurs ce sacrifice de louange, pour leur propre rédemption, pour la paix et le salut qu'ils espèrent ; et ils te rendent cet hommage, à toi, Dieu éternel vivant et vrai.
+
+\switchcolumn*
+
+Communicántes,
+et memóriam venerántes,
+in primis gloriósæ semper Vírginis Maríæ,
+Genetrícis Dei et Dómini nostri Iesu Christi, 
+sed et beáti Ioseph, eiúsdem Vírginis Sponsi,
+et beatórum Apostolórum ac Mártyrum tuórum,
+Petri et Pauli, Andréæ,
+(Iacóbi, Ioánnis,
+Thomæ, Iacóbi, Philíppi,
+Bartholomǽi, Matthǽi,
+Simónis et Thaddǽi: 
+Lini, Cleti, Cleméntis, Xysti,
+Cornélii, Cypriáni,
+Lauréntii, Chrysógoni,
+Ioánnis et Pauli,
+Cosmæ et Damiáni)
+et ómnium Sanctórum tuórum;
+quorum méritis precibúsque concédas,
+ut in ómnibus protectiónis tuæ muniámur auxílio.
+(Per Christum Dóminum nostrum. Amen.)
+
+\switchcolumn
+
+Unis dans une même communion, vénérant d’abord la mémoire de la bienheureuse Marie toujours Vierge, Mère de notre Dieu et Seigneur, Jésus Christ ; et celle de saint Joseph, son époux, les saints Apôtres et Martyrs Pierre et Paul, André, [Jacques et Jean, Thomas, Jacques et Philippe, Barthélemy et Matthieu, Simon et Jude, Lin, Clet, Clément, Sixte, Corneille et Cyprien, Laurent, Chrysogone, Jean et Paul, Côme et Damien] et tous les saints.
+Nous t'en supplions, accorde-nous, par leur prière et leurs mérites, d'être, toujours et partout, forts de ton secours et de ta protection. [Par le Christ notre Seigneur. Amen.]
+
+\switchcolumn*
+
+Hanc ígitur oblatiónem servitútis nostræ,
+sed et cunctæ famíliæ tuæ,
+quǽsumus, Dómine, ut placátus accípias:
+diésque nostros in tua pace dispónas,
+atque ab ætérna damnatióne nos éripi
+et in electórum tuórum iúbeas grege numerári.
+(Per Christum Dóminum nostrum. Amen.)
+
+\switchcolumn
+
+Voici donc l’offrande que nous présentons devant toi, nous tes serviteurs, et ta famille entière : 
+Seigneur, dans ta bienveillance, accepte-la.
+Assure toi-même la paix de notre vie, arrache nous à la damnation éternelle et veuille nous admettre au nombre de tes élus. 
+
+\switchcolumn*
+
+Quam oblatiónem tu, Deus, in ómnibus, quǽsumus,
+benedíctam, adscríptam, ratam,
+rationábilem, acceptabilémque fácere dignéris:
+ut nobis Corpus et Sanguis fiat dilectíssimi Fílii tui,
+Dómini nostri Iesu Christi. 
+Qui, prídie quam paterétur, 
+accépit panem in sanctas ac venerábiles manus suas,
+et elevátis óculis in cælum
+ad te Deum Patrem suum omnipoténtem,
+tibi grátias agens benedíxit,
+fregit,
+dedítque discípulis suis, dicens: 
+
+\switchcolumn
+
+Seigneur Dieu, nous t’en prions, daigne bénir et accueillir cette offrande, accepte-la pleinement, 
+rends la parfaite et digne de toi : qu’elle devienne pour nous le Corps et le Sang de ton Fils bien-aimé,
+Jésus, le Christ, notre Seigneur. 
+La veille de sa passion, il prit le pain dans ses mains très saintes et, les yeux levés au ciel, vers toi, Dieu, son Père tout-puissant, en te rendant grâce il dit la bénédiction,, le rompit, et le donna à ses disciples, en disant :
+
+\switchcolumn*
+
+Accípite et manducáte ex hoc omnes:
+hoc est enim Corpus meum,
+quod pro vobis tradétur. 
+
+\switchcolumn
+
+Prenez, et mangez-en tous ceci est mon corps livré pour vous.
+
+\switchcolumn*
+
+Símili modo, postquam cenátum est, 
+accípiens et hunc præclárum cálicem
+in sanctas ac venerábiles manus suas,
+item tibi grátias agens benedíxit,
+dedítque discípulis suis, dicens: 
+
+\switchcolumn
+
+De même après le repas,
+il prit cette coupe incomparable dans ses mains très saintes ; 
+et te rendant grâce à nouveau, il dit la bénédiction, et donna la coupe à ses disciples, en disant : 
+
+\switchcolumn*
+
+Accípite et bíbite ex eo omnes:
+hic est enim calix Sánguinis mei
+novi et ætérni testaménti,
+qui pro vobis et pro multis effundétur
+in remissiónem peccatórum.
+Hoc fácite in meam commemoratiónem. 
+
+\switchcolumn
+
+Prenez, et buvez-en tous, car ceci est la coupe de mon sang, le sang de l'Alliance nouvelle et éternelle, qui sera versé pour vous et pour la multitude en rémission des péchés. Vous ferez cela, en mémoire de moi.
+
+\end{paracol}
+
+\gresetinitiallines{0}
+\gregorioscore{gabc/or08--mysterium_fidei--solesmes.gabc}
+
+\emph{\vv Il est grand, le mystère de la foi. \\
+\rr Nous annonçons ta mort, Seigneur Jésus, nous proclamons ta résurrection, nous attendons ta venue dans la gloire.}
+
+\begin{paracol}{2}
+
+Unde et mémores, Dómine,
+nos servi tui,
+sed et plebs tua sancta,
+eiúsdem Christi, Fílii tui, Dómini nostri,
+tam beátæ passiónis,
+necnon et ab ínferis resurrectiónis,
+sed et in cælos gloriósæ ascensiónis:
+offérimus præcláræ maiestáti tuæ
+de tuis donis ac datis
+hóstiam puram,
+hóstiam sanctam,
+hóstiam immaculátam,
+Panem sanctum vitæ ætérnæ
+et Cálicem salútis perpétuæ.
+
+\switchcolumn
+
+Voilà pourquoi nous aussi, tes serviteurs, et ton peuple saint avec nous, faisant mémoire de la passion bienheureuse de ton Fils, Jésus, le Christ, notre Seigneur, de sa résurrection du séjour des morts et de sa glorieuse ascension dans le ciel, nous te présentons, Dieu de gloire et de majesté, cette offrande prélevée sur les biens que tu nous donnes, le sacrifice pur et saint, le sacrifice parfait, pain de la vie éternelle et coupe du salut.
+
+\switchcolumn*
+
+Supra quæ propítio ac seréno vultu
+respícere dignéris:
+et accépta habére,
+sícuti accépta habére dignátus es
+múnera púeri tui iusti Abel,
+et sacrifícium Patriárchæ nostri Abrahæ,
+et quod tibi óbtulit summus sacérdos tuus Melchísedech,
+sanctum sacrifícium, immaculátam hóstiam.
+
+\switchcolumn
+
+Et comme il t'a plu d'accueillir les présents de ton serviteur Abel le Juste, le sacrifice d’Abraham, notre père dans la foi, et celui que t'offrit Melchisédech, ton grand prêtre, oblation sainte et immaculée, regarde ces offrandes avec amour et, dans ta bienveillance, accepte-les.
+
+\switchcolumn*
+
+Súpplices te rogámus, omnípotens Deus:
+iube hæc perférri per manus sancti Angeli tui
+in sublíme altáre tuum,
+in conspéctu divínæ maiestátis tuæ;
+ut, quotquot ex hac altáris participatióne
+sacrosánctum Fílii tui Corpus et Sánguinem
+sumpsérimus,
+omni benedictióne cælésti et grátia repleámur.
+(Per Christum Dóminum nostrum. Amen.)
+
+\switchcolumn
+
+Nous t'en supplions, Dieu tout-puissant : qu'elles soit portées par les mains de ton ange en présence de ta gloire, sur ton autel céleste, afin qu'en recevant ici, par notre communion à l'autel, le corps et le sang très saints de ton Fils, 
+nous soyons comblés de la grâce et de toute bénédiction du ciel. [Par le Christ, Notre Seigneur, Amen.]
+
+\switchcolumn*
+
+Meménto étiam, Dómine,
+famulórum famularúmque tuárum \rubrique{N.} et \rubrique{N.},
+qui nos præcessérunt cum signo fídei,
+et dórmiunt in somno pacis.
+Ipsis, Dómine, et ómnibus in Christo quiescéntibus,
+locum refrigérii, lucis et pacis,
+ut indúlgeas, deprecámur.
+(Per Christum Dóminum nostrum. Amen.)
+
+\switchcolumn
+
+Souviens-toi aussi, Seigneur,
+de tes serviteurs et de tes servantes (de \rubrique{N.} et \rubrique{N.}) qui nous ont précédés, marqués du signe de la foi, et qui dorment dans la paix. Pour eux et pour tous ceux qui reposent dans le Christ, nous implorons ta bonté, Seigneur : qu'ils demeurent dans la joie, la lumière et la paix. [Par le Christ, Notre Seigneur, Amen]
+
+\switchcolumn*
+
+Nobis quoque peccatóribus fámulis tuis,
+de multitúdine miseratiónum tuárum sperántibus,
+partem áliquam et societátem donáre dignéris
+cum tuis sanctis Apóstolis et Martýribus:
+cum Ioánne, Stéphano,
+Matthía, Bárnaba,
+(Ignátio, Alexándro,
+Marcellíno, Petro,
+Felicitáte, Perpétua,
+Agatha, Lúcia,
+Agnéte, Cæcília, Anastásia)
+et ómnibus Sanctis tuis:
+intra quorum nos consórtium,
+non æstimátor mériti,
+sed véniæ, quǽsumus, largítor admítte.
+Per Christum Dóminum nostrum.
+
+\switchcolumn
+
+Et nous, pécheurs, tes serviteurs, qui mettons notre espérance en ta miséricorde inépuisable, admets-nous dans la communauté des saints Apôtres et Martyrs, avec Jean Baptiste, Étienne, Matthias et Barnabé, [Ignace, Alexandre, Marcellin et Pierre, Félicité et Perpétue, Agathe, Lucie, Agnès, Cécile, Anastasie,] et tous les saints. Nous t’en prions, accueille-nous dans leur compagnie,
+sans nous juger sur le mérite
+mais en accordant largement ton pardon,
+par le Christ, notre Seigneur.
+
+\switchcolumn*
+
+Per quem hæc ómnia, Dómine, 
+semper bona creas, sanctíficas, vivíficas, benedícis,
+et præstas nobis.
+
+\switchcolumn
+
+Par lui, tu ne cesses de créer tous ces biens,
+tu les sanctifies, leur donnes la vie, les bénis
+et nous en fais le don.
+
+\switchcolumn*
+
+Per ipsum, et cum ipso, et in ipso,
+est tibi Deo Patri omnipoténti,
+in unitáte Spíritus Sancti,
+omnis honor et glória
+per ómnia sǽcula sæculórum.\\
+\rr Amen. 
+
+\switchcolumn
+
+Par lui, avec lui et en lui, à toi, Dieu le Père tout-puissant, dans l'unité du Saint-Esprit, tout honneur et toute gloire, pour les siècles des siècles.\\
+\rr Amen.
+
+\end{paracol}
+
+\gregorioscore{gabc/or09--pater_noster_(a)--solesmes.gabc}
+
+\emph{\vv Comme nous l'avons appris du Sauveur, et selon son commandement, nous osons dire :\\
+\rr Notre Père qui es au cieux, que ton nom soit sanctifié ; que ton règne vienne ; que ta volonté soit faite sur la terre comme au ciel. Donne-nous aujourd'hui notre pain de ce jour ; pardonne-nous nos offenses comme nous pardonnons aussi à ceux qui nous ont offensés ; et ne nous laisse pas entrer en tentation ; mais délivre-nous du mal.}
+
+\begin{paracol}{2}
+Líbera nos, quǽsumus, Dómine, ab ómnibus malis,
+da propítius pacem in diébus nostris,
+ut, ope misericórdiæ tuæ adiúti,
+et a peccáto simus semper líberi
+et ab omni perturbatióne secúri:
+exspectántes beátam spem
+et advéntum Salvatóris nostri Iesu Christi.
+
+\switchcolumn
+
+Délivre nous de tout mal, Seigneur,
+et donne la paix à notre temps :
+soutenus par ta miséricorde,
+nous serons libérés de tout péché,
+à l’abri de toute épreuve,
+nous qui attendons que se réalise
+cette bienheureuse espérance :  
+l’avénement de Jésus Christ, notre Sauveur.
+
+\end{paracol}
+
+\gregorioscore{gabc/or10--quia_tuum--solesmes.gabc}
+\emph{\rr Car c'est à toi qu'appartiennent le règne, la puissance et la gloire, pour les siècles des siècles.}
+
+\begin{paracol}{2}
+
+Dómine Iesu Christe, qui dixísti Apóstolis tuis:
+Pacem relínquo vobis, pacem meam do vobis:
+ne respícias peccáta nostra,
+sed fidem Ecclésiæ tuæ;
+eámque secúndum voluntátem tuam
+pacificáre et coadunáre dignéris.
+Qui vivis et regnas in sǽcula sæculórum.\\
+\rr Amen. 
+
+\switchcolumn
+
+Seigneur Jésus-Christ, tu as dit à tes apôtres : « Je vous laisse la paix, je vous donne la paix », ne regarde pas nos péchés, mais la foi de ton Église ; pour que ta volonté s'accomplisse, donne-lui toujours cette paix et conduis-la vers l'unité parfaite, toi qui règnes pour les siècles des siècles. 
+\rr Amen.
+
+\end{paracol}
+
+\gregorioscore{gabc/or11--pax_domini--solesmes.gabc}
+
+\emph{\vv Que la paix du Seigneur soit toujours avec vous.\\
+\rr Et avec votre esprit.}
+
+\gresetinitiallines{1}
+\gregorioscore{gabc/04ky--agnus_dei_iii--solesmes.gabc}
+
+\paragraph{Communion}
+\begin{paracol}{2}
+
+Ecce Agnus Dei, ecce qui tollit peccáta mundi.
+Beáti qui ad cenam Agni vocáti sunt. 
+
+\switchcolumn
+
+Voici l’agneau de Dieu,
+voici celui qui enlève les péchés du monde.
+Heureux les invités au repas des noces de l’Agneau !
+
+\switchcolumn*
+
+Dómine, non sum dignus, ut intres sub téctum meum,
+sed tantum dic verbo, et sanábitur ánima mea.
+
+\switchcolumn
+
+Seigneur, je ne suis pas digne de te recevoir, mais dis seulement une parole et je serai guéri.
+
+\end{paracol}
+
+\gregorioscore{gabc/co.gabc}
+ 
+\rubrique{Luc 12 : 42 \& Ps. 131}\\
+\emph{\rr Le serviteur fidèle et avisé que le Seigneur établit sur ses gens pour leur donner en temps voulu leur ration de froment.\\
+\vv \rubrique{\emph{12a. }} Si tes fils gardent mon alliance, les volontés que je leur fais connaître,\\
+\vv \rubrique{\emph{12b. }} Leurs fils, eux aussi, à tout jamais, siègeront sur le trône dressé pour toi.\\
+\vv \rubrique{\emph{13. }} Car le Seigneur a fait choix de Sion ; elle est le séjour qu'il désire.\\
+\vv \rubrique{\emph{15. }} Je bénirai, je bénirai ses récoltes pour rassasier de pain ses pauvres.\\
+\vv \rubrique{\emph{16. }} Je vêtirai de gloire ses prêtres, et ses fidèles crieront, crieront de joie.
+}
+
+\paragraph{Postcommunion}
+\begin{paracol}{2}
+\vv Orémus.
+\switchcolumn
+\vv Prions le Seigneur.
+\switchcolumn*
+Acceptórum múnerum virtus, Dómine Deus,
+in hac festivitáte beáti Ioanni Pauli nobis efféctus ímpleat,
+ut simul et mortális vitæ subsídium cónferat,
+et gáudium perpétuæ felicitátis obtíneat.
+Per Christum Dóminum nostrum.\\
+\rr Amen.
+\switchcolumn
+POSTCOM MESSE 2 DES PASTEURS TODO\\
+\rr Amen.
+\end{paracol}
+
+\paragraph{Envoi}
+\gresetinitiallines{0}
+\gregorioscore{gabc/or12--dominus_vobiscum_..._benedicat_(b)--solesmes.gabc}
+
+\begin{paracol}{2}
+\end{paracol}
+\end{document}
