@@ -236,3 +236,13 @@ headsep=0mm,
 	\switchcolumn*
 
 }
+
+\newcommand{\gscore}[1]{
+	\gregorioscore{gabc/#1}
+}
+
+\newcommand{\smallscore}[1]{
+	\gresetinitiallines{0}
+	\gscore{#1}
+	\gresetinitiallines{1}
+}
