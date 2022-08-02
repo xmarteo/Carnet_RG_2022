@@ -15,7 +15,7 @@
 \usepackage{parskip}
 \usepackage{enumitem}
 \usepackage{etoolbox}
-
+\usepackage{needspace}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mise en page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % on numérote les nbp par page et non globalement
@@ -177,7 +177,7 @@ headsep=0mm,
 %%%%%%%%%%%%%%%% Commandes de mise en forme %%%%%%%%%%%%%%%%
 
 \newcommand{\lectioresponsorium}[8]{
-
+	\needspace{4\baselineskip}
 	\paragraph{#1}
 
 	\vv Jube, domne, benedícere.\\
@@ -192,7 +192,7 @@ headsep=0mm,
 	\ifblank{#7}{}{\gregorioscore{gabc/#7}}
 
 	\switchcolumn
-
+	\needspace{4\baselineskip}
 	\paragraph{#2}
 
 	\vv Veuillez, maître, bénir.\\
@@ -235,6 +235,10 @@ headsep=0mm,
 
 	\switchcolumn*
 
+}
+
+\newcommand{\versetGloireAuPere}{
+	\vv Gloire au Père, au Fils, et au Saint-Esprit.
 }
 
 \newcommand{\gscore}[1]{
