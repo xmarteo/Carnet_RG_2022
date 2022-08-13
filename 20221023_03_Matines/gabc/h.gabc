@@ -1,50 +1,60 @@
-name:Primo dierum omnium;
-office-part:Hymnus;
-mode:4;
-transcriber:Dominique CROCHU;
+initial-style: 1;
+name: Primo dierum omnium;
+mode: 4;
+office-part: Hymnus;
+annotation: Hymn.;
+annotation: iv;
+nabc-lines: 1;
 %%
-(c4)Pri(d)mo(e) di(f)é(g)rum(eg) óm(f)ni(e)um,(f_) (,)
-Quo(d) mun(e)dus(f) ex(g)stat(eg) cón(f)di(e)tus(ded.) (;)
-Vel(e) quo(c) re(e)súr(gh)gens(hi) Cón(h)di(g)tor(h_) (,)
-Nos,(f) mor(h)te(h) vic(g)ta,(ef) lí(g)be(f)rat,(e.) (::)
+(c4) PRi(d|ta)mo(e|vi) di(f|vihg)é(g|vihh)rum(eg|pe) óm(f|vi)ni(e|ta)um,(f|vi-) (,)
+Quo(d|ta) mun(e|vi)dus(f|vihg) ex(g|vihh)stat(eg|pe) cón(f|vi)di(e|vi)tus(ded|to-1)
+(;)
+Vel(e|vi) quo(c|ta) re(e|vi)súr(gh|pe)gens(ixhi|////pehg) Cón(h|vi)di(g|ta)tor(h|vi-)
+(,)
+Nos,(f|ta) mor(h|vi)te(h|vi) vic(g|vi)ta,(ef|pe) lí(g|vihg)be(f|vi)rat,(e|ta-) (::)
 
-2. Pul(d)sis(e) pro(f)cul(g) tor(eg)pó(f)ri(e)bus,(f_) (,)
-Sur(d)gá(e)mus(f) om(g)nes(eg) ó(f)ci(e)us,(ded.) (;) 
-Et(e) noc(c)te(e) quæ(gh)rá(hi)mus(h) pi(g)um,(h_) (,) 
-Sic(f)ut(h) Pro(h)phé(g)tam(ef) nó(g)vi(f)mus,(e.) (::)
+2. Pul(d|ta)sis(e|vi) pro(f|vihg)cul(g|vihh) tor(eg|pe)pó(f|vi)ri(e|ta)bus,(f|vi-) (,)
+Sur(d|ta)gá(e|vi)mus(f|vihg) om(g|vihh)nes(eg|pe) ó(f|vi)ci(e|vi)us,(ded|to-1) (;)
+Et(e|vi) noc(c|ta)te(e|vi) quæ(gh|pe)rá(ixhi|////pehg)mus(h|vi) pi(g|ta)um,(h|vi-)
+(,)
+Si(f|ta)cut(h|vi) Pro(h|vi)phé(g|vi)tam(ef|pe) nó(g|vihg)vi(f|vi)mus,(e|ta-) (::)
 
-3. Nos(d)tras(e) pre(f)ces(g) ut(eg) áu(f)di(e)at(f_) (,)
-Su(d)ám(e)que(f) dex(g)tram(eg) pór(f)ri(e)gat,(ded.) (;) 
-Et(e) ex(c)pi(e)á(gh)tos(hi) sór(h)di(g)bus(h_) (,) 
-Red(f)dat(h) po(h)ló(g)rum(ef) sé(g)di(f)bus,(e.) (::)
+3. No(d|ta)stras(e|vi) pre(f|vihg)ces(g|vihh) ut(eg|pe) áu(f|vi)di(e|ta)at(f|vi-) (,)
+Su(d|ta)ám(e|vi)que(f|vihg) dex(g|vihh)tram(eg|pe) pór(f|vi)ri(e|vi)gat,(ded|to-1)
+(;)
+Et(e|vi) ex(c|ta)pi(e|vi)á(gh|pe)tos(ixhi|////pehg) sór(h|vi)di(g|ta)bus(h|vi-) (,)
+Red(f|ta)dat(h|vi) po(h|vi)ló(g|vi)rum(ef|pe) sé(g|vihg)di(f|vi)bus,(e|ta-) (::)
 
-4. Ut,(d) qui(e)que(f) sa(g)cra(eg)tís(f)si(e)mo(f_) (,)
-Hu(d)jus(e) di(f)é(g)i(eg) tém(f)po(e)re(ded.) (;)
-Ho(e)ris(c) qui(e)é(gh)tis(hi) psál(h)li(g)mus,(h_) (,) 
-Do(f)nis(h) be(h)á(g)tis(ef) mú(g)ne(f)ret.(e.) (::)
+4. Ut,(d|ta) qui(e|vi)que(f|vihg) sa(g|vihh)cra(eg|pe)tís(f|vi)si(e|ta)mo(f|vi-) (,)
+Hu(d|ta)jus(e|vi) di(f|vihg)é(g|vihh)i(eg|pe) tém(f|vi)po(e|vi)re(ded|to-1) (;)
+Ho(e|vi)ris(c|ta) qui(e|vi)é(gh|pe)tis(ixhi|////pehg) psál(h|vi)li(g|ta)mus,(h|vi-) (,)
+Do(f|ta)nis(h|vi) be(h|vi)á(g|vi)tis(ef|pe) mú(g|vihg)ne(f|vi)ret.(e|ta-) (::)
 
-5. Jam(d) nunc,(e) pa(f)tér(g)na(eg) clá(f)ri(e)tas,(f_) (,)
-Te(d) pos(e)tu(f)lá(g)mus(eg) áf(f)fa(e)tim :(ded.) (;)
-Ab(e)sit(c) li(e)bí(gh)do(hi) sór(h)di(g)dans(h_) (,)
-Et(f) om(h)nis(h) ac(g)tus(ef) nó(g)xi(f)us.(e.) (::)
+5. Jam(d|ta) nunc,(e|vi) pa(f|vihg)tér(g|vihh)na(eg|pe) clá(f|vi)ri(e|ta)tas,(f|vi-) (,)
+Te(d|ta) po(e|vi)stu(f|vihg)lá(g|vihh)mus(eg|pe) áf(f|vi)fa(e|vi)tim:(ded|to-1) (;)
+Ab(e|vi)sit(c|ta) li(e|vi)bí(gh|pe)do(ixhi|////pehg) sór(h|vi)di(g|ta)dans(h|vi-) (,)
+Et(f|ta) om(h|vi)nis(h|vi) ac(g|vi)tus(ef|pe) nó(g|vihg)xi(f|vi)us.(e|ta-) (::)
 
-6. Ne(d) fœ(e)da(f) sit,(g) vel(eg) lú(f)bri(e)ca(f_) (,)
-Com(d)pá(e)go(f) nos(g)tri(eg) cór(f)po(e)ris,(ded.) (;)
-Per(e) quam(c) a(e)vér(gh)ni(hi) í(h)gni(g)bus(h_) (,)
-Ip(f)si(h) cre(h)mé(g)mur(ef) á(g)cri(f)us.(e.) (::)
+6. Ne(d|ta) fœ(e|vi)da(f|vihg) sit,(g|vihh) vel(eg|pe) lú(f|vi)bri(e|ta)ca(f|vi-) (,)
+Com(d|ta)pá(e|vi)go(f|vihg) no(g|vihh)stri(eg|pe) cór(f|vi)po(e|vi)ris,(ded|to-1)
+(;)
+Per(e|vi) quam(c|ta) a(e|vi)vér(gh|pe)ni(ixhi|////pehg) í(h|vi)gni(g|ta)bus(h|vi-) (,)
+I(f|ta)psi(h|vi) cre(h|vi)mé(g|vi)mur(ef|pe) á(g|vihg)cri(f|vi)us.(e|ta-) (::)
 
-7. Ob(d) hoc,(e) Red(f)émp(g)tor,(eg) quǽ(f)su(e)mus,(f_) (,)
-Ut(d) pro(e)bra(f) nos(g)tra(eg) dí(f)lu(e)as ;(ded.) (;)
-Vi(e)tæ(c) per(e)én(gh)nis(hi) cóm(h)mo(g)da(h_) (,)
-No(f)bis(h) be(h)ní(g)gne(ef) cón(g)fe(f)ras.(e.) (::)
+7. Ob(d|ta) hoc,(e|vi) Re(f|vihg)démp(g|vihh)tor,(eg|pe)
+quǽ(f|vi)su(e|ta)mus,(f|vi-) (,)
+Ut(d|ta) pro(e|vi)bra(f|vihg) no(g|vihh)stra(eg|pe) dí(f|vi)lu(e|vi)as;(ded|to-1) (;)
+Vi(e|vi)tæ(c|ta) pe(e|vi)rén(gh|pe)nis(ixhi|////pehg) cóm(h|vi)mo(g|ta)da(h|vi-) (,)
+No(f|ta)bis(h|vi) be(h|vi)ní(g|vi)gne(ef|pe) cón(g|vihg)fe(f|vi)ras.(e|ta-) (::)
 
-8. Quo(d) car(e)nis(f) ac(g)tu(eg) éx(f)su(e)les(f_) (,)
-Ef(d)féc(e)ti(f) ip(g)si(eg) cǽ(f)li(e)bes,(ded.) (;)
-Ut(e) præ(c)sto(e)lá(gh)mur(hi) cér(h)nu(g)i,(h_) (,)
-Me(f)los(h) ca(h)ná(g)mus(ef) gló(g)ri(f)æ.(e.) (::)
+8. Quo(d|ta) car(e|vi)nis(f|vihg) a(g|vihh)ctu(eg|pe) éx(f|vi)su(e|ta)les(f|vi-) (,)
+Ef(d|ta)féc(e|vi)ti(f|vihg) i(g|vihh)psi(eg|pe) cǽ(f|vi)li(e|vi)bes,(ded|to-1) (;)
 
-9. Præ(d)sta,(e) Pa(f)ter(g) pi(eg)ís(f)si(e)me,(f_) (,)
-Pa(d)trí(e)que(f) com(g)par(eg) U(f)ni(e)ce,(ded.) (;)
-Cum(e) Spí(c)ri(e)tu(gh) Pa(hi)rá(h)cli(g)to(h_) (,)
-Re(f)gnans(h) per(h) om(g)ne(ef) sǽ(g)cu(f)lum.(e.) (::)
-A(efe)men.(de..) (::)
+Ut(e|vi) præ(c|ta)sto(e|vi)lá(gh|pe)mur(ixhi|////pehg) cér(h|vi)nu(g|ta)i,(h|vi-) (,)
+Me(f|ta)los(h|vi) ca(h|vi)ná(g|vi)mus(ef|pe) gló(g|vihg)ri(f|vi)æ.(e|ta-) (::)
+
+9. Præ(d|ta)sta,(e|vi) Pa(f|vihg)ter(g|vihh) pi(eg|pe)ís(f|vi)si(e|ta)me,(f|vi-) (,)
+Pa(d|ta)trí(e|vi)que(f|vihg) com(g|vihh)par(eg|pe) U(f|vi)ni(e|vi)ce,(ded|to-1) (;)
+Cum(e|vi) Spí(c|ta)ri(e|vi)tu(gh|pe) Pa(ixhi|////pehg)rá(h|vi)cli(g|ta)to(h|vi-) (,)
+Re(f|ta)gnans(h|vi) per(h|vi) om(g|vi)ne(ef|pe) sǽ(g|vihg)cu(f|vi)lum.(e|ta-) (::)
+A(efe|toS)men.(de|pq-) (::)
