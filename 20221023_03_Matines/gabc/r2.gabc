@@ -1,22 +1,13 @@
-name:Exaudiat Dominus;
-office-part:Responsorium;
+name:Exaudiat Dominus V Det vobis cor;
+office-part:re;
 mode:2;
-transcriber:Marek Klein;
-commentary:2Mac 1,5 V/ Id.,4; H414;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(f3)Ex(c)áu(e/fg>)di(f)at(f) Dó(hgh)mi(fg)nus(ffoe) (`) 
-o(e)ra(f)ti(h)ó(hvGFEf)nes(f@gwh/ihhog) ve(fg@hvGFg)stras,(gf) (;)
-et(h) re(kxh@iwji/jkj)con(i>)ci(hi)li(h)é(hhog)tur(-hi>) 
-vo(highvGFg)bis(gf) (;)
-nec(fg) vos(f) dé(fg)se(f)rat(f) 
-in(f) tém(FGhvGFE~)po(f)re(hg/hih) ma(hvGFg)lo(ffoe) (;)
-<sp>*</sp> Dó(f/hvGE)mi(f)nus,(hvv) 
-De(h)us(ihhog) no(fg@hvGFg)ster.(gf) (::)
+(f3) EX(c|gr)áu(e/fg>|vi-pe>hi)di(f|ta)at(f|vi) Dó(hgh|po)mi(fg|pe)nus(ffoe|pr-) (`) o(e|grhc)ra(f|vihc)ti(h|vihe)ó(hvGFEf|vi-suu1su2vihh)nes(f!gwh/ihhog|qlppt1clShkpihllsco2) ve(fg!hvGFg|//ci-pp2vihg)stras(gf|cl-) (;) et(h|vilsl2) re(kxh!iwji/jkj|////vi-qlhj!clhjtohm)con(i>|vi>hd)ci(hi|pe)li(h|ta)é(hhog|pr-)tur(-hi>|pe>) vo(highvGFg|toSci-hivihj)bis,(gf|cl-) (;) nec(fg|pe) vos(f|ta) dé(fg|pe)se(f|ta)rat(f|ta) in(f|ta) tém(fg!hvG~F~E~|ci>pp2lsc2)po(f|vi)re(hg/hih|clto) ma(hvGFg|ci-vihg)lo(ffoe|pr-) (;)
 
-<sp>V/</sp> Det(ef@gwh/hi) vo(hi)bis(hg) 
-cor(hi) ó(gh)mni(f@gwhg)bus,(gf) (;)
-ut(f) co(ef)lá(f)tis(f) e(fg)um(f) (,) 
-et(f) fa(f)ci(f)á(fg)tis(f) e(f)jus(f@gwhGFE) 
-vo(f)lun(hg/hih)tá(hvGFg)tem.(ffoe) (::)
+<sp>+</sp> Dó(f/hvGE|vi-cilsc2)mi(f|ta)nus(hvv|bv-) De(h|vi)us(ihhog|clS-hgpihhlsco2) no(fg!hvGFg|//ci-pp2vihg)ster.(gf|cl-) (::)
 
-<sp>*</sp> Dó(f/hvGE)mi(f)nus(hvv) (::)
+<c><sp>V/</sp>.</c> Det(f|vi) vo(ef!gwhhi|ql-ppt2pehi)bis(h|ta) cor(h|ta) óm(ij|``pelss1)ni(i|vi)bus,(h|ta-) (,) ut(h|ta) co(hg|cllsc3)lá(hi|pe)tis(gh|pe) e(f!gwhg|ql!cl-ppt1)um(gf|cl-) (;) et(f|vi) fa(ef|pe)ci(f|ta)á(fg|pe)tis(f|ta) e(f|ta)jus(f!gwhGFE|ql-su1sut2ppt1) vo(f|vi)lun(hg/hih|cltohg)tá(hvGFg|ci-vihg)tem.(ffoe|pr-) (::)
+
+<sp>+</sp> Dó(f/hvGE|vi-cilsc2)mi(f|ta)nus(hvv|bv-) De(h|vi)us(ihhog|clS-hgpihhlsco2) no(fg!hvGFg|//ci-pp2vihg)ster.(gf|cl-) (::)

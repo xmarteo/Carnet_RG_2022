@@ -1,29 +1,19 @@
 name:Duo Seraphim V Tres sunt V Gloria;
 office-part:re;
 mode:1;
-submitter:marteo;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(c4)Du(dc_)o(a) Sé(cd/ed)ra(cd)phim(d_) <sp>*</sp> (,)
-cla(dcd)má(f!go!hv)bant(g) 
-al(f!go!h>)ter(f_e) ad(cd) ál(dc~)te(d!ewfef)rum :(ed..) (:)
+(c4) DU(dc|cllsc3)o(a|grhe) Sé(c!ded|clpp2lsc3)ra(cd|pe)phim(d|vi-) (,) cla(dcd|``polse4)má(f@goh|saM1)bant(g|vi) al(f@goh|sa)ter(fe|cllsc3) ad(cd|``pelsi7) ál(dc|cllsc3)te(d!ewfef|ql!poppt1)rum:(ed|cl-) (:)
 
-<sp>+</sp> San(ixh_ghvGF!gw!h!g/hi~)ctus,(h.) (,) San(ixdh__/ihhg/hvGF!gw!h!g/hi~)ctus,(h.) (,) San(ixjg__/hv_GF!gw!h!g/hi~)ctus(h.) (;) 
-Dó(hg)mi(e)nus(gh) De(fv_ED)us(cd) Sá(d)ba(d!ewfef)oth :(ed..) (:)
+<sp>+</sp> Sanc(ixhghvGF/gwhghiv|////cl-ciS1ql!po-1vihk)tus,(h|vi-) (,) Sanc(ixdh/ihhog/hvGF/gwhghiv|////pe-cl!piciS1ql!po-1vihk)tus,(h|vi-) (,) Sanc(ixjg/hvGF/gwhghiv|////cl-lsal2ciS1ql!po-1vihk)tus(h|vi-) (;) Dó(hg|cl)mi(e|ta)nus(gh|``pelss7) De(fvED|ci-)us(cd|pe) Sá(d|ta)ba(d!ewfef|ql!poppt1)oth:(ed|cl-) (:)
 
-<sp>‡</sp> Ple(d)na(cdCAcd) est(d_)
-o(d/fgFD/fe~)mnis(cd) ter(d!ewfef)ra(ed..) (;) gló(dvCAcd_/fgFD/f_e)ri(cd)a(d) e(d!ewfef)jus.(ed..) (::)
+<sp>‡</sp> Ple(d|``vilse1)na(cd/CAcod|pesu1suw1lsc2/pq) est(d|vi-) om(d@fogFD/fe|saM2``puhhpu/clhhlsc3)nis(cd|pe) ter(d!ewfef|ql!poppt1)ra(ed|cl-) (;) gló(dvCAcodfgFD/fe|ciM/pq-he//////pesu2cllsc3)ri(cd|``pelsi7)a(d|vi) e(d!ewfef|ql!poppt1)jus.(ed|cl-) (::)
 
-<sp>V/</sp> Tres(dh) sunt(hg/hggof)
-qui(g) te(g)sti(g)mó(g)ni(g)um(hf) 
-dant(gh) in(gh) cæ(ixh_/iioh)lo,(h.) (;) 
-Pa(h_)ter,(j_`) Ver(kj)bum,(h_`) 
-et(h) Spí(gf)ri(gh)tus(gh) Sanc(ixh_/iioh)tus,(h.) (;) 
-et(hg) hi(e) tres(gh) u(fe)num(c/efd~) sunt.(d.) (::) 
+<c><sp>V/</sp>.</c> Tres(dh|pe) sunt(hg/hggf|clcl!pilst3) qui(g|vilsew3) te(g|vi)sti(g|vi)mó(g|vi)ni(g|vi)um(hf|cllss2) dant(gh|pe) in(gh|pe) cæ(ixh/iioh|////ta/pr-)lo,(h|ta-) (;) Pa(h|``talse1)ter,(j|vi-) Ver(kj|clhilsl2)bum,(h|ta-) et(h|``vilse4) Spí(gf|cllsi2lsc3)ri(gh|pe)tus(gh|pe) Sanc(ixh/iioh|////ta/pr-)tus,(h|ta-) (;) et(hg|cllse2lsc3) hi(e|ta) tres(gh|``pelss7) u(fe|cllsc3)num(c/efd~|ta-/pe>hglsi6) sunt.(d|ta) (::) 
 
-<sp>+</sp> San(ixh_ghvGF!gw!h!g/hi~)ctus.(h.) (::)
+<sp>+</sp> Sanc(ixhghvGF/gwhghiv|////cl-ciS1ql!po-1vihk)tus,(h|vi-) (::)
 
-<sp>V/</sp> Gló(dh)ri(h)a(hg/hggof) 
-Pa(hf)tri,(gh) et(gh) Fí(h)li(ixh_/iioh)o,(h.) (:) 
-et(h) Spi(h)rí(hg)tu(e)i(gh) San(fvEC/efd~)cto.(d.) (::) 
+<c><sp>V/</sp>.</c> Gló(dh|pe)ri(h|vi)a(hg/hg/gf|clcl!pilst3) Pa(hf|cl)tri,(gh|pe) et(gh|pe) Fí(h|vi)li(ixh/iioh|////ta-/pr-)o,(h|vi-) (:) et(h|ta) Spi(h|vi)rí(hg|cllsc3)tu(e|ta)i(gh|pelss4) Sanc(fvEC/efd~|ci/pe>hg)to.(d|ta) (::) 
 
-<sp>‡</sp> Ple(d)na(cdCAcd) est.(d_) (::)
+<sp>‡</sp> Ple(d|``vilse1)na(cd/CAcod|pesu1suw1lsc2/pq) est(d|vi-) (::)

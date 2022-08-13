@@ -1,24 +1,13 @@
-name:Congregatae sunt gentes;
-office-part:Responsorium;
+name:Congregatae sunt gentes V Tu scis quae cogitant;
+office-part:re;
 mode:8;
-book:Cod. Sang. 391: Antiphonarium officii (summer volume), 1000, p. 221;
-transcriber:Marek Klein;
-commentary:1Mac 3,52; 2Chr 20,12 \GreSpecial{V/} Ps 79,2; H415;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(c4)Con(d)gre(d)gá(f/gh)tæ(g) sunt(g) gen(gh~)tes(g) 
-in(g) mul(g)ti(ixg!hoi)tú(h)di(h)ne,(hg/h!iwjghvggof) (;)
-ut(hf~) di(g)mi(hjh)cá(g)rent(hf/gh!iwjIHiwjIH>) 
-con(g)tra(gh!ivHGh) nos,(g!hih) (;)
-et(fh) i(jkjh~)gno(jk)rá(ki/jkhiv)mus(hhog) (`) 
-quid(f) á(ixhih)ge(hg)re(iyi) de(j)be(ji/jvIHG)á(hghvGFg)mus :(gf) (:)
-<sp>*</sp>
-Dó(FGhjh)mi(g)ne(g) De(g)us(e) ad(g) te(fef) 
-sunt(dec/d!ewfefvED) ó(f/gh)cu(g)li(gh) no(h)stri,(ixhg/hig/gf) (;) 
-ne(gh) pe(g)re(gh!iwjIHiwjIH)á(gh!ivHGh)mus.(hg) (::)
+(c4) COn(d|ta)gre(d|ta)gá(f/gh|scM1)tæ(g|ta) sunt(g|ta) gen(gh~|ta>)tes(g|ta) in(g|ta) mul(g|ta)ti(ixg!hoi|////saM1)tú(h|vi)di(h|vi)ne,(hg/h!iwjghvggof|cl-qlhg!clhgppt1vi-hlprhm) (;) ut(hf~|vi>) di(g|vi)mi(hjh|to)cá(g|ta)rent(hf/gh!iwjIH/iwjIH>|cl-ql-hhsut2ppt2ql-hjsu1sux1) con(g|ta)tra(gh!ivHGh|ci-pp2vihg) nos,(ixg!hih|////cl-ppt2) (;) et(fh|``peSlsi7lsl3) i(jkJ~H~|////to>hk)gno(jk|peShj)rá(ki/jkhiv|clhito-1hkvihl)mus(hhog|pr-) (`) quid(f|ta) á(ixhih|////to)ge(hg|cllsc3)re(iyi|////vi) de(j|vi)be(ji/jvIHG|cl-vi-hgsuu1su2)á(hghvGFg|clci-hgvihh)mus.(gf|cl-) (:)
 
-<sp>V/</sp>.
-Tu(ji) scis(jkj/iji/hhog) quæ(i) có(ih)gi(ij)tant(hi) in(g!hwih) nos :(hg) (;) 
-quó(g)mo(g)do(g) po(g)té(fg)ri(g)mus(g) sub(g)sí(gh)ste(g)re(g) an(g)te(g) fá(fg)ci(g)em(g) il(gh)ló(g!hwih)rum,(hg) (;)
-ni(g)si(fg) tu(ixhiHGhih) á(ghf)ju(gh)ves(h!iwji/jkjIH) nos ?(hiHGhg) (::)
+<sp>+</sp> Dó(fg!hjh|tohgpp2lss3)mi(g|vi)ne(g|vi) De(g|vi)us(e|ta) ad(g|vi) te(fef|po) sunt(dec/d!ewfefvED|to-1ql!clppt1ci-hj) ó(f/gh|vi-pe)cu(g|vi)li(gh|pe) no(h|vi)stri,(ixhg/hig/gf|////cllsc2to-1cl-hh) (;) ne(gh|pe) per(g|ta)e(gh!iwjIH/iwjIH|ql-hhsut2ppt2ql-hksu2)á(gh!ivHGh|//ci-pp2vihg)mus.(hg|cl-) (::)
 
-<sp>*</sp> Dó(FGhjh)mi(g)ne(g) (::)
+<c><sp>V/</sp>.</c> Tu(ji|cllsc3) scis(jkj/iji/hho1g|tohhtohjprhk) quæ(hi|pe) có(i|vi)gi(i|vi)tant(ih|cllsc3) in(jk|pehilss2) nos:(j|ta-) (,) quó(jk|pehi)mo(j|ta)do(j|ta) pot(j|ta)té(j|ta)ri(j|ta)mus(j|ta) sub(j|ta)sí(jk|pehi)ste(j|ta)re(j|ta-) (,) an(j|ta)te(j|vi)  fá(ji|cllsc3)ci(ih|cllsc3)em(ij|pe) il(hi|pe)ló(g!hwih|ql!cl-ppt1)rum,(hg|cl-) (;) ni(g|ta)si(g|ta) tu(ixhiHGhih|////pe-su2tohg) ád(ghf|to)ju(gh|peS)ves(iyh!iwji/jkJIH|////ql!clppt1to-1hlsu2) nos?(hiHGhg|pe-1su2cl-hg) (::)
+
+<sp>+</sp> Dó(fg!hjh|tohgpp2lss3)mi(g|vi)ne(g|vi) De(g|vi)us(e|ta) ad(g|vi) te(fef|po) sunt(dec/d!ewfefvED|to-1ql!clppt1ci-hj) ó(f/gh|vi-pe)cu(g|vi)li(gh|pe) no(h|vi)stri,(ixhg/hig/gf|////cllsc2to-1cl-hh) (;) ne(gh|pe) per(g|ta)e(gh!iwjIH/iwjIH|ql-hhsut2ppt2ql-hksu2)á(gh!ivHGh|//ci-pp2vihg)mus.(hg|cl-) (::)

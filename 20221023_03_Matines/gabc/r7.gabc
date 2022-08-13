@@ -1,24 +1,13 @@
-name:Refulsit sol in clypeos;
-office-part:Responsorium;
+name:Refulsit sol in clypeos V Erat enim exercitus;
+office-part:re;
 mode:2;
-book:Cod. Sang. 391: Antiphonarium officii (summer volume), 1000, p. 219;
-transcriber:Marek Klein;
-commentary:1Mac 6,19 \GreSpecial{V/} Id.,41-42; H413;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(f3)Re(c)fúl(e/fg>)sit(f) sol(f) in(f) 
-clý(f)pe(f)os(gwh) áu(hgh)re(fg)os,(ffoe) (,) 
-et(e) res(f)plen(h)du(h)é(hi)runt(h) 
-mon(hvGFEfg>)tes(f) ab(f!gwh/ihhog) e(fg!hvGFg)is :(gf) (:)
-<sp>*</sp>
-Et(e/fh~) for(hhog~)ti(-hi)tú(hhog)do(-hi) 
-gén(hi>)ti(ghGFg)um(gf) (,) 
-dis(ghg)si(e!fog)pá(hf!gwhGF)ta(e!fwhGFg) est.(gf) (::)
+(f3) RE(c|gr)fúl(e/fg>|vi-hdpe>hg)sit(f|ta) sol(f|ta) in(f|ta) clý(f|ta)pe(f|ta)os(gwh|ql) áu(hgh|po)re(fg|pe)os,(ffoe|pr-) (,) et(e|``tahdlse1) re(f|vi)splen(h|vi)du(h|vi)é(hi|pe)runt(h|ta) mon(hvGFEfg>|vi-suu1su2pe>1hg)tes(f|ta) ab(f!gwh/ihhog|qlppt1clShipihjlsco2) e(fg!hvGFg|//ci-pp2vihg)is;(gf|cl-) (:)
 
-<sp>V/</sp>.
-E(ef!gwh/hi)rat(h) e(ij)nim(i>) e(h)xér(hi~)ci(h)tus(h) 
-ma(hi~)gnus(h) val(hg~)de(hi) et(gh) for(f!gwhg)tis,(gf) (;)
-et(f) ap(ef)pro(f)pi(f)á(f)vit(f) Ju(fg)das(f) 
-et(f) ex(f)ér(fg)ci(f)tus(f) e(f)jus(f!gwhGFE) 
-in(f) pr<sp>'ae</sp>(hg/hih)li(hvGFg)o.(ffoe) (::)
+<sp>+</sp> Et(e/fh~|sc-) for(hhog~|vs>he)ti(-hi|pe)tú(hhog|pr-)do(-hi|pehg) gén(hi>|pe>1)ti(ghGFg|pe-1su2vihg)um(gf|cl-) (,) dis(ghg|tolss2)si(e!fog|sa)pá(hf!gwhGF|cl-ql-hhsu2)ta(e!fwhGFg|ql-su2ppt1vihg) est.(gf|cl-) (::)
 
-<sp>*</sp> Et.(e/fh~) (::)
+<c><sp>V/</sp>.</c> E(ef!gwh/hi|ql-ppt2pehj)rat(h|ta) e(ij|pe)nim(i>|vi>) ex(h|ta)ér(hi~|ta>)ci(h|ta)tus(h|ta) ma(hi~|ta>)gnus(h|ta) val(hg~|vi>)de(hi|pe) et(gh|pe) for(f!gwhg|ql!cl-ppt1)tis,(gf|cl-) (;) et(f|vi) ap(ef|pe)pro(f|ta)pi(f|ta)á(f|ta)vit(f|ta) Ju(fg|ta)das(f|ta) et(f|ta) ex(f|ta)ér(fg|ta>)ci(f|ta)tus(f|ta) e(f|ta)jus(f!gwhGFE|ql-su1sut2ppt1) in(f|vi) prǽ(hg/hih|cllsc2tohg)li(hvGFg|ci-vihg)um.(ffoe|pr-) (::)
+
+<sp>+</sp> Et.(e/fh~|sc-) (::)
