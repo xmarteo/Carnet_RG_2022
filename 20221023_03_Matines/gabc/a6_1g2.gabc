@@ -1,7 +1,7 @@
 name:Exsurge Domine non praevaleat;
-office-part:Antiphona;
-mode:1;
-book:Nocturnale Romanum, 2002, p. 14;
-transcriber:Matthäus Freitag;
+office-part:an;
+mode:1g2;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(c4)Ex(g)súr(h>)ge,(g) Dó(h)mi(fg)ne,(g) <v>\greheightstar</v>(,) non(f) præ(f)vá(gh)le(e)at(f) ho(d)mo.(d) (::) 
+(c4) Ex(g|ta)súr(h>|vi>)ge,(g|ta) Dó(h|vi)mi(fg|pe)ne,(g|vi-) <v>\greheightstar</v>(,) non(f|ta) præ(f|``talse1)vá(fg|peS)le(e|ta)at(fo|orhg) ho(d|ta-)mo.(d|ta-) (::) <eu>E(h) U(h) O(g) U(f) A(h) E.</eu>(g) (::)

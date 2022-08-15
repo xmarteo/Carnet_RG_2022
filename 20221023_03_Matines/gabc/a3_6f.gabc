@@ -1,7 +1,7 @@
 name:Exsurge Domine salvum;
-office-part:Antiphona;
-mode:6;
-book:Nocturnale Romanum, 2002, p. 9;
-transcriber:Matthäus Freitag;
+office-part:an;
+mode:6f;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(c4)Ex(f)súr(fg~)ge,(f) <v>\greheightstar</v>() Dó(fe)mi(dc)ne,(c) (,) sal(d>)vum(c) me(df) fac,(fe) De(g)us(gh) me(f)us.(f) (::)
+(c4)Ex(f|ta)súr(fg~|pe~)ge,(f|ta) <v>\greheightstar</v>() Dó(fe|cllsc3)mi(dc|cllsc3)ne,(c|ta-) (,) sal(d>|vi>)vum(c|ta) me(df|``pelss2) fac,(fe|cllsc3) De(g|vi)us(gh|pe) me(f|ta-)us.(f|ta-) (::) <eu>E(h) U(h) O(f) U(gh) A(g) E.(f) </eu>(::)

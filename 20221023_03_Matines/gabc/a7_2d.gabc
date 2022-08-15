@@ -1,6 +1,7 @@
 name:Ut quid Domine recessisti;
-office-part:Antiphona;
-mode:2;
-book:Nocturnale Romanum, 2002, p. 16;
+office-part:an;
+mode:2d;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(f3)Ut(f) quid,(hg) Dó(h)mi(g)ne,(f) <sp>*</sp>(,) re(gh)ces(fe)sís(f)ti(gh) lon(f)ge?(f) (::)
+(f3) Ut(f|ta) quid,(hg|cllsc3) Dó(h|vihh)mi(g|vi)ne,(f|ta-) <sp>*</sp>(,) re(gh|pe)ces(fe|cllsc3)sís(f|vi)ti(gwh|qlhh) lon(f|ta-)ge?(f|ta-) <sp>+</sp>(::) <eu>E(h) U(h) O(h) U(g) A(ef) E.(f) </eu>(::)
