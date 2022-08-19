@@ -1,7 +1,11 @@
 name:Erat quidam regulus;
 office-part:Antiphona;
 mode:1;
-book:The Liber Usualis, 1961, p. 1107 & Liber antiphonarius, 1960, p. 571;
-transcriber:Andrew Hinkley;
+transcriber:Matthias Bry;
+nabc-lines:1;
+nabc-source:www.e-codices.unifr.ch/en/csg/0391/242;
 %%
-(c4) E(d)rat(dc~) qui(f)dam(g) ré(f)gu(gh)lus,(hgg) (,) cu(f)jus(g) fí(gh__)li(g)us(f) in(f)fir(f)ma(f)bá(fg)tur(f) Ca(fe)phár(g)na(fe)um :(d.) (:) hic(dfddc) cum(f) au(g)dís(fh)set(h) (,) qui(h)a(h) Je(hj)sus(h) ve(g)ní(h)ret(g) in(gf~) Ga(g)li(gh)laé(ffg)am,(f.) (;) ro(fe)gá(g)bat(fe) e(d!ewf)um,(fc__) (,) ut(c) sa(df)ná(ffg)ret(f) fí(ef__)li(g)um(fe) e(d.)jus.(d.) (::)
+(c4) E(d!ewfd|qipp1)rat(dc~|cl) qui(f|vi)dam(g|vi) ré(f|ta)gu(gh|pe)lus,(hgg|clor) (,) 
+cu(f|ta)jus(g|vi) fí(h|peS)li(g|vi)us(f|ta) in(f|ta)fir(f|ta)ma(f|ta)bá(fg|pe)tur(f|ta) 
+Ca(fe|cl)phár(g|vi)na(fe|cl)um :(d.|ta) (:) 
+hic(dfd/dc|to!pi) cum(f|vi) au(g>|cl~)dís(fh|pe)set(h|vi) (,) qui(h|vi)a(h|vi) Je(hj|pe)sus(h|vi) ve(g|ta)ní(h|vi)ret(g|ta) in(f>|cl~) Ga(g|vi)li(gh|vi)lǽ(fv_fv_ggf|pe)am,(f.|cl) (;) ro(fe|cl)gá(g|vi)bat(fe|cl) e(d!ewf|qlppt1)um,(fc|clM) (,) ut(c|ta) sa(df|pe)ná(ffg|vipe)ret(ff|ta) fí(ef|peS)li(g|pe)um(fe|cl) e(d.|ta)jus.(d.|ta) (::) <eu>E(h) u(h) o(g) u(f) a(gh) e.(gf..) </eu>(::)
