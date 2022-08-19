@@ -1,7 +1,25 @@
-name:Inveni David;
-office-part:Offertorium;
-mode:8;
-book:Graduale Romanum, 1961, p. [34] & Graduale Romanum, 1961, p. [9] & The Liber Usualis, 1961, p. 1185;
-transcriber:Andrew Hinkley;
+initial-style: 1;
+name: Inveni David;
+mode: 8;
+office-part: Offertorium;
+annotation: viii;
+annotation: Off.;
+nabc-lines: 1;
+transcriber:Dominique Crochu;
 %%
-(c3) In(c)vé(e!fg)ni(f) <sp>*</sp>() Da(f)vid(fhffe) (,) ser(f)vum(fiHGh) me(fgf)um,(f.) (:) ó(hhi)le(h)o(h) san(h)cto(hiHG/hvGFEfe) (,) un(hhf~)xi(hh) e(giHG)um :(g.) (:) ma(hhi)nus(h) e(hi/ji)nim(ihh) me(f!hhhf/ivHGh)a(h) (,) au(h)xi(h)li(h)á(hhi)bi(f)tur(ed) e(fhFEfvEDe)i,(ed..) (:) et(ef~) brá(e)chi(ef!gwhg)um(h) me(hg)um(hig/hvFEf) (,) con(e)for(f)tá(f!hhhf/ivHGh)bit(gf) e(efe)um.(e.) (::)
+(c3) IN(c|ta)vé(e!fg|vi-`pehhlss7)ni(f|ta)
+Da(f|ta)vid(fhffe.|toS2lse4lss2cl) (,)
+ser(f|vi)vum(fiHGh|``pesu2lss2vi>lsi6) 
+me(fgf___|toS)um,(f.|vi) (:)
+ó(hhi|vi-`pehhlse7)le(h|ta)o(h|ta)
+sanc(h|ta)to(hiHG|toS2sut2lse7|hvGFE|vi-hgsut1su2|fe..|cl-hh) (,) 
+un(hhf~|vi-vi>lsi6)xi(hh|bvlsp2)
+e(giHG|pe-1su2)um :(g.|ta) (:)
+ma(hhi|vi-`pehhlse7)nus(h|ta) e(hi/ji|clpp2)nim(ihh|po>lsi6)
+me(f!hhhf|``talsim8dshiclhi|ivHGh|cihilss2orhj)a(h.|ta) (,)
+au(h|``talse1)xi(h|ta)li(h|ta)á(hhi|salse7)bi(f|vi)tur(e_d|cl-lst2)
+e(fhFEfvEDe|toS2sut1ci-hgvihh)i,(ed..|cl-) (:) et(ef~|``ta>lsl2)
+brá(e|ta)chi(e.f!gwhg|ql!clppt2orhi)um(h|/ta)
+me(hg|cllst2)um(hig/hvFEf.|to!ciGlse7lsi2vihh) (,)
+con(e|ta)for(f|vi)tá(f!hh|sthedshi|hf/ivHGh|pohhsu2/vihh)bit(g_f|cl-)
+e(efe___|toS)um.(e.|ta) (::)

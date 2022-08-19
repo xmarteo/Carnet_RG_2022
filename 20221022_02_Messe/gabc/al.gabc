@@ -2,6 +2,7 @@ name:Tu es sacerdos;
 office-part:Alleluia;
 mode:8;
 book:Graduale Romanum, 1961, p. [33] & Graduale Romanum, 1961, p. [4] & The Liber Usualis, 1961, p. 1495B;
-transcriber:Andrew Hinkley;
+transcriber:Matthias Bry;
+nabc-lines:1;
 %%
-(c4) Al(d)le(d!gfg//hjh)lú(fg~){ia}.(g.) <sp>*</sp>(;) (hjhj/klJGhjIHG) (,) (hjhj/klJG/hjIHG) (;) (hjij//ikJHhg//ig/hhg.) (::) <c><sp>V/</sp>.</c> Tu(fg) es(g) sa(h)cér(ijhhg~)dos(g) in(ih) ae(jkj)tér(jjjvIGh)num,(h.) (;) se(hi!j'k)cún(kj~)dum(kj/ikJHhg) ór(ih/ij)di(hg)nem(gh/jkj//ikJHhg.) *(;) Mel(d)chí(d!gfg//hjh)se(fg)dech.(g.) (;) (hjhj/klJGhjIHG) (,) (hjhj/klJGhjIHG) (;) (hjij//ikJHhg//ig/hhg.) (::)
+(c4) AL(d|ta)le(dgfg//|tr|hjh|pesu2)lú(fg~|pe~){ia}.(g.|vi-) (;) <sp>*</sp> <i>ij.</i>(hjhj.|po|klJG.|////pe-1sut2pi|hjIHG.|ql-ppt1su2pi) (,) (hjhj.|tr|klJG./hjIHG.|////pe-1su2pi) (;) (hjij//|tr|ikJHhg//|peSsu2pi|ig|to|hhg.|pr) (::) <c><sp>V/</sp>.</c> Tu(fg|peS) es(g|vi) sa(h|vi)cér(ijh|vicl|hg~|vs>)dos(g.|ta) in(ih|clS) <sp>ae</sp>(jkj___|toShl)tér(jj|bvhh|jvIGh|vihhsut1``pe~)num,(h.|vi-) (;) se(hi!j'k|sahhpp1)cún(kj~|cl~hh)dum(kj|clhh|ikJHhg.|//peSsu2pi) ór(ih/ij|qlppt1``cl>hj)di(hg|cl)nem(gh|vi-|jkj//ikJHhg.) *(;) Mel(d|ta)chí(dgfg//|tr|hjh|to)se(fg|pt)dech.(g.|vi-) (;) (hjhj.|po|klJG.|////pe-1sut2|hjIHG.|pi) (,) (hjhj./klJG.hjIHG.) (;) (hjij//ikJHhg//ig/hhg.) (::)
