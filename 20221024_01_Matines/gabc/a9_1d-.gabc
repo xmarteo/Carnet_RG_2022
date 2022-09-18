@@ -1,14 +1,7 @@
 name:Per tres dies orationi cum uxore;
 office-part:an;
-mode:1d-;
-submitter:marteo;
+mode:1D-;
+submitter:dcrochu;
+nabc-lines:1;
 %%
-(c4) Per(e) tres(cd) di(ixdh!iv)es(h_) <sp>*</sp>
-o(h)ra(h)ti(h)ó(ixhi)ni(h_) (,)
-cum(h) u(h)xó(ixhi)re(h) tu(hjh)a(h)
-va(hvGF)cá(g)bis,(f.) (;)
-ut(h) in(j<) se(kj)mi(iyi)ne(hg)
-A(ixhvGFgwh@iv)bra(h)hæ(h_) (,)
-be(h)ne(g)dic(fe)ti(f)ó(g)nem(d) in(d) fí(f)li(e)is(e)
-con(fg~)se(fe)quá(d.)ris.(d.)  (::)
-<eu>  E(h) U(h) O(g) U(f) A(g) E.(gvFED) </eu> (::)
+(c4) Per(c|ta) tres(d|vi) di(ixdh!iv|////scG-1)es(h|ta) <sp>*</sp> o(h|ta)ra(h|ta)ti(h|ta)ó(h|vi)ni(ixhg/hiHGgo|////cllsc2pesu2orhg) (,) cum(f|ta)  u(g|vi)xó(gh|pehg)re(gf|cllsc3) tu(gh|pehg)a(g|vi) va(f|ta)cá(fvED|ci-)bis,(d|ta-) (;) ut(f|vi) in(g<|ta>hg) sé(h|vihh)mi(g|vi)ne(f|ta) A(g|vi)bra(gf!gwhgh|cl-qlhg!pohg)hæ(hg|cl-) (,) be(h|``vihhlss4)ne(g|vihg)dic(f|vi)ti(e|ta)ó(fg|pe)nem(d|ta) in(d|``talse1) fí(f|vihh)li(e|ta)is(f|vi) con(gh~|```pe~lsal4)se(fe|cllsc3)quá(d|ta)ris.(d|ta)  (::) E(h) U(h) O(g) U(f) A(g) E.(gvFED) (::)
